@@ -1,0 +1,391 @@
+$dark-blue: #262833;
+$heading-font: hucklebuck-jf, sans-serif;
+
+body {
+	font-size: 16px;
+	font-family: macho, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+ul {
+	padding: 0;
+}
+
+section, header {
+	overflow: hidden;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+section {
+	.content {
+		padding: 50px 0;
+	}
+}
+
+header {
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.nav {
+	li {
+		display: inline-block;
+		&> a {
+			padding: 15px;
+		}
+	}
+}
+
+// Sections
+
+.section-heading {
+	font-family: $heading-font;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 3.5em;
+	margin-top: 10px;
+}
+
+.content-section .section-heading {
+	text-align: center;
+	margin-bottom: 20px;
+
+	&:before {
+		font-family: FontAwesome;
+		content: "\f005";
+		margin-right: 20px;
+		font-size: 70%;
+	}
+	&:after {
+		font-family: FontAwesome;
+		content: "\f005";
+		margin-left: 20px;
+		font-size: 70%;
+	}
+}
+
+.contact {
+	background: $dark-blue;
+	color: #fff;
+	.content {
+		padding: 50px 15px;
+	}
+}
+
+.contact-information {
+	list-style: none;
+	.hours {
+		padding-left: 15px;
+		list-style-type: none;
+	}
+	.fa {
+		margin-right: 10px;
+	}
+}
+
+.about {
+	background: url("/images/paper.png");
+	background-attachment: fixed;
+	background-position: center 220px;
+}
+
+// Pages
+
+.page-content {
+	padding: 0 0 50px 0;
+	h1 {
+		font-family: $heading-font;
+		font-size: 2.5em;
+	    margin-bottom: 30px;
+    	padding: 10px 0 20px 0;
+    	border-bottom: 1px dashed #ddd;
+	}
+	p {
+		font-size: 1.2em;
+	}
+}
+.banner-image {
+    max-width: 480px;
+    width: 100%;
+    padding: 2px;
+    border: 1px solid #eee;
+    float: right;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+.info {
+	background: #f6f6f6;
+	padding: 15px;
+	margin-bottom: 1em;
+}
+
+// Homepage Hero
+
+header.hero {
+	height: 90vh;
+	.brand-logo {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		img {
+			width: 100px;
+		}
+	}
+	nav {
+		width: 100%;
+		z-index: 10;
+		position: absolute;
+		bottom: 0;
+	}
+	.backdrop {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: url('/images/coffee.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		z-index: 2;
+	}
+	.nav {
+		li {
+			&> a {
+				color: #fff;
+				font-size: 1.2em;
+				padding-bottom: 25px;
+				border-bottom: 5px solid transparent;
+				&:hover {
+					background: none;
+					border-bottom-color: #fff;
+				}
+			}
+			i.fa {
+				display: none;
+			}
+		}
+	}
+}
+
+.hero-content {
+	height: 100%;
+	position: relative;
+	z-index: 5;
+	overflow: hidden;
+	text-align: center;
+	h1 {
+		margin-top: 42vh;
+		font-size: 5.6em;
+		background: rgba(38,40,51,1);
+		padding: 10px 0;
+		font-family: $heading-font;
+		font-style: normal;
+		font-weight: 400;
+	}
+	h2 {
+		font-size: 1.5em;
+		background: rgba(38,40,51, 0.85);
+		padding: 8px 0 13px 0;
+		margin: 0 auto;
+		margin-top: -10px;
+		max-width: 820px;
+		border-radius: 0 0 5px 5px;
+	}
+}
+
+// Page Header
+
+header.page-header {
+	background: #fff;
+	margin: 0;
+	border: none;
+	nav {	
+		li {
+			&> a {
+				padding: 28px 15px 20px 15px;
+				color: $dark-blue;
+				border-top: 5px solid transparent;
+				&.active {
+					border-color: $dark-blue;
+				}
+			}
+		}
+		.navbar-brand {
+			padding-top: 10px;
+			margin-right: 30px;
+			img {
+				width: 92px;
+			}
+		}
+		.navbar-header {
+			height: 115px;
+		}
+		.navbar-toggle {
+			margin-top: 30px;
+			padding: 13px 15px 13px 69px;
+			border: 1px solid #e8e8e8;
+			.menu-text {
+				position: absolute;
+				left: 15px;
+				top: 0.45em;
+				color: $dark-blue;
+			}
+			.icon-bar {
+				background: $dark-blue;
+			}
+		}
+	}
+}
+
+// Footer
+
+footer {
+    background: $dark-blue;
+    overflow: hidden;
+    .footer-logo {
+    	text-align: center;
+    	margin-top: 20px;
+    	img {
+    		width: 100px;
+    		opacity: 0.8;
+    	}
+    }
+    .copyright {
+    	text-align: center;
+    	font-size: 0.8em;
+    	color: rgba(255,255,255,0.2);
+    	padding: 20px 0 10px 0;
+    }
+    &.sticky-footer {
+    	position: fixed;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+    }
+}
+
+// --- Mobile --- //
+
+@media ( max-width: 772px ) {
+	header {
+		background: #000000;
+		&.hero {
+			height: 450px;
+			.backdrop {
+				background-position: center -110px;
+				background-size: 772px;
+				opacity: 0.6;
+			}
+			.brand-logo {
+				top: 70px;
+				left: 0;
+				right: 0;
+				img {
+					width: 120px;
+				}
+			}
+			nav {
+				border-bottom: 2px solid rgba(255,255,255, 0.2);
+				width: 100%;
+				background: $dark-blue;
+			}
+			.nav {
+				text-align: center;
+				li {
+					width: 50%;
+					float: left;
+					border-left: 1px solid rgba(255,255,255, 0.2);
+					&> a {
+						text-align: center;
+						padding-top: 25px;
+						&:hover {
+							border-bottom-color: transparent;
+						}
+					}
+					&:first-child {
+						border-left: 0;
+					}
+				}
+			}
+		}
+		.hero-content {
+			margin: 0 auto;
+			h1 {
+				font-size: 4em;
+				background: none;
+				margin: 0;
+				width: 100%;
+				position: absolute;
+				top: 180px;
+			}
+			h2 {
+				// font-family: avenir-black, arial;
+				background: none;
+				font-weight: 500;
+				position: absolute;
+				top: 245px;
+				margin-top: 15px;
+				font-size: 1.4em;
+				border-radius: 0;
+				padding: 23px 0 27px 0;
+				width: 100%;
+			}
+		}
+		&.page-header {
+			nav li {
+				display: block;
+				border-top: 1px solid #e6e6e6;
+				&:last-child {
+					border-bottom: 1px solid #e6e6e6;
+				}
+				&> a {
+					padding: 15px;
+				}
+			}
+		}
+	}
+	.section-heading {
+		font-size: 2em;
+	}
+
+}
+
+@media ( max-width: 480px ) {
+	header.hero {
+		.hero-content {
+			h1 {
+				font-size: 3.1em;
+				margin-top: 8px;
+			}
+			h2 {
+				margin-top: 0;
+				font-size: 1.2em;
+			}
+		}
+		.nav li > a {
+			font-size: 1em;
+		}
+	}
+}
+
+// Map Styles
+
+#map {
+    height: 350px;
+    width:100%;
+}
+.gm-style-iw * {
+    display: block;
+    width: 100%;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+.gm-style-iw a {
+    color: #4272db;
+}
